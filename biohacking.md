@@ -2,6 +2,12 @@ Biohacking & Quantified Self
 ================================
 
 Note:
+* What it is
+* How it's done in general
+* Good examples
+* Personal examples
+* How to get started
+
 whoami
 ======
 [Fredrik Liljegren](https://fredrik.liljegren.org/)
@@ -14,48 +20,38 @@ What is Bio Hacking?
 ====================
 
 Note:
-Approaching your biology, your health, with a hacker mentality.
+Rich Hickey - pick word, talk definition.
 
-Grinders
+Bio - biology.
+
+Approaching your biology, your health, even relations, with a hacker mentality.
+
+Athletes
 Body builders
 
 
-[Hacker](http://catb.org/jargon/html/H/hacker.html)
---------
-
-RFC1392 defines:
+[RFC1392](https://tools.ietf.org/html/rfc1392) defines:
 
 > A person who delights in having an intimate understanding of the internal workings of a system…
 
 
-(Not talking about Grinders)
-![Magnet implant](./biohacking/grindermagnet.jpg)
+[Jargon file](http://catb.org/jargon/html/H/hacker.html) definition #7:
 
-
-
-Quantification
-==============
-
-
-Get the idea
-------------
+> One who enjoys the intellectual challenge of creatively overcoming or circumventing limitations.
 
 Note:
-Anti-aging
-Fitness
-Health
-Kicking ass
+In practice…
 
 
-Measure
--------
-
+### The quantifiers
 ![Fitness trackers](./biohacking/fitnesstrackers.jpg)
 
 
-Affect
-------
+### The grinders
+![Magnet implant](./biohacking/grindermagnet.jpg)
 
+
+### …and lots of different "hacks"
 ![Training and food](./biohacking/trainingandfood.jpg)
 
 
@@ -65,16 +61,110 @@ Note:
 Blocking blue light a few hours before going to bed.
 
 
-Reality check
--------------
 
+How it's done
+=============
+
+
+Measure something of value
+--------------------------
+
+Note:
+* Fitness, weight
+* Health
+* Productivity
+* Aging
+* Kicking ass
+* Relationships
+* Habits
+
+Measuring habits has its own value.
+
+
+Find correlations
+-----------------
+
+
+![Sleep and distraction correlation](./biohacking/sleepdistractioncorrelation.png)
+
+
+![Useless data](./biohacking/uselessdata.png)
+
+
+Hack it!
+--------
+
+What have others done?
+
+Note:
+* Building/modifying habits
+* Getting rid off… (carbs, shoes)
+* Adding… (polyfenols, supplements, minimalistic shoes)
+* Stopping…
+
+
+![Ice bath](./biohacking/icebath.jpeg)
+
+Note:
+Starting a new habit.
+
+
+![Bare feet](./biohacking/feet.jpg)
+
+Note:
+Getting rid of something.
+
+
+![Butter coffee](./biohacking/buttercoffee.jpg)
+
+Note:
+Adding something.
+
+
+Evaluate / Reality Check
+------------------------
+
+Do I really have less head aches now?
+
+![Head ache & weight](./biohacking/headacheweight.png)
+
+
+Rinse and repeat
+----------------
 
 > ...chasing the "no"...
 
+* Study
+* [Discuss](https://forum.quantifiedself.com/)
+* Get a new or modified approach
 
 
-Measuring and Quantification
-============================
+
+Personal stories
+================
+
+Note:
+* Early on:
+  * Weight
+  * Meditations per day
+* Recently:
+  * Trackers: Heart rate, steps, runs/activities
+  * Logging: Waist, Head ache
+  * Occasionally: Food, body temp, supplements
+
+
+Stopping self deception
+-----------------------
+
+[Headache pills since 2017]()
+
+
+
+Get started
+===========
+
+Note:
+or rather, go further
 
 
 525 600 minutes
@@ -104,17 +194,9 @@ Bein data driven
 
 
 
-What have I learned?
-====================
 
 
-Stopping self deception
------------------------
+> The key is progression, not perfection.
 
-[Headache pills since 2017]()
-
-
-<section data-background-iframe="https://slides.com" data-background-interactive>
-  <h2>Iframe</h2>
-</section>
-    
+Note:
+First heard from Charles Poliquin, used more widely.
