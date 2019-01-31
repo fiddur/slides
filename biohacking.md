@@ -28,13 +28,73 @@ RFC1392 defines:
 > A person who delights in having an intimate understanding of the internal workings of a system…
 
 
-Quantification
-==============
+(Not talking about Grinders)
 
-QS
+![Magnet implant](./biohacking/grindermagnet.jpg)
+
+
+Get the idea
+------------
+
+Note:
+Anti-aging
+Fitness
+Health
+Kicking ass
+
+
+Measure
+-------
+
+![Fitness trackers](./biohacking/fitnesstrackers.jpg)
+
+
+Affect
+------
+
+![Training and food](./biohacking/trainingandfood.jpg)
+
+
+![Sleep glasses](./biohacking/sleepglasses.png)
+
+Note:
+Blocking blue light a few hours before going to bed.
+
+
+Reality check
+-------------
+
+
+> ...chasing the "no"...
+
+
+
+Measuring and Quantification
+============================
+
+
+525 600 minutes
+---------------
+How do you measure a year in the life?
+
+> 🎶 In daylights? 🎶  
+> In sunsets?  
+> In midnights?  
+> In cups of coffee?  
+> In inches, in miles, in laughter, in strife?  
+
+Note:
+Measuring behaviour affects behaviour.
+
+
+![Food logging](./biohacking/foodlogging.png)
 
 
 > Having to record "4 M&Ms" along with lunch is just kinda annoying.
+
+
+![Manual logging](./biohacking/manuallogging.jpg)
+
 
 
 What have I learned?
@@ -45,3 +105,9 @@ Stopping self deception
 -----------------------
 
 [Headache pills since 2017]()
+
+
+<section data-background-iframe="https://slides.com" data-background-interactive>
+  <h2>Iframe</h2>
+</section>
+    
