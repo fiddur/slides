@@ -28,10 +28,14 @@ RFC1392 defines:
 > A person who delights in having an intimate understanding of the internal workings of a system…
 
 
+
 Quantification
 ==============
 
 QS
+
+Note:
+Bein data driven
 
 
 > Having to record "4 M&Ms" along with lunch is just kinda annoying.
