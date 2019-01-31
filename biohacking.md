@@ -29,8 +29,12 @@ RFC1392 defines:
 
 
 (Not talking about Grinders)
-
 ![Magnet implant](./biohacking/grindermagnet.jpg)
+
+
+
+Quantification
+==============
 
 
 Get the idea
@@ -88,6 +92,9 @@ Measuring behaviour affects behaviour.
 
 
 ![Food logging](./biohacking/foodlogging.png)
+
+Note:
+Bein data driven
 
 
 > Having to record "4 M&Ms" along with lunch is just kinda annoying.
