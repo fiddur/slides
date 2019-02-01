@@ -15,8 +15,8 @@ whoami
 
 
 
-What is Bio Hacking?
-====================
+Bio Hacking
+===========
 
 Note:
 Bio - biology.
@@ -78,8 +78,8 @@ Adding something.
 
 
 
-What is Quantified Self?
-========================
+Quantified Self
+===============
 
 Note:
 * Biohackers that don't quantify.
@@ -178,8 +178,8 @@ Pseudo-science, try it yourself!
 
 
 
-What am I doing?
-================
+What I'm doing
+==============
 
 Note:
 
@@ -242,8 +242,7 @@ Inspired by Maffetone two week test.  After two weeks, evaluate:
 Note:
 * Logging food, changes what you eat.
 
-
-> Having to record "4 M&Ms" along with lunch is just kinda annoying.
+> "Having to record "4 M&Ms" along with lunch is just kinda annoying.
 
 
 Low heart rate running
@@ -301,9 +300,10 @@ Note:
 * Using rescueTime metrics
 * Rise of Superman
 
-
-
-> The key is progression, not perfection.
-
 Note:
-First heard from Charles Poliquin, used more widely.
+The key is progression, not perfection.
+(First heard from Charles Poliquin, used more widely.)
+
+
+
+Biohacking is not about trying harder, it's about finding a better approach.
