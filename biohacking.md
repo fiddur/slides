@@ -18,6 +18,8 @@ whoami
 Bio Hacking
 ===========
 
+Finding a smarter approach.
+
 Note:
 Bio - biology.
 
@@ -80,6 +82,8 @@ Adding something.
 
 Quantified Self
 ===============
+
+Know thyself.
 
 Note:
 * Biohackers that don't quantify.
