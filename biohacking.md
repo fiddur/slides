@@ -3,7 +3,7 @@ Biohacking & Quantified Self
 
 Note:
 * What it is
-* How it's done in general
+* How it can be done
 * What I do
 * Discussion
 
@@ -29,7 +29,7 @@ Athletes
 Body builders
 
 
-[RFC1392](https://tools.ietf.org/html/rfc1392) defines:
+[RFC1392](https://tools.ietf.org/html/rfc1392) (Internet User's Glossary) defines:
 
 > A person who delights in having an intimate understanding of the internal workings of a system…
 
@@ -83,7 +83,7 @@ Adding something.
 Quantified Self
 ===============
 
-Know thyself.
+Know thyself (through numbers).
 
 Note:
 * Biohackers that don't quantify.
@@ -112,22 +112,24 @@ Note:
 Measuring habits has its own value.
 
 
+Automated measuring
+
 ![Fitness trackers](./biohacking/fitnesstrackers.jpg)
 
 Note:
-* Hear rate
+* Heart rate
 * Sleep
 * Movement, steps
 
 
 ![Manual logging](./biohacking/manuallogging.jpg)
 
+Note:
 * Something scary - pushing the bounds of your comfort zone
 
 
 Find correlations
 -----------------
-
 
 ![Sleep and distraction correlation](./biohacking/sleepdistractioncorrelation.png)
 
@@ -149,6 +151,7 @@ Does my walking really affect my weight?
 Note:
 * Not tracking the right thing
 * No progress
+* Too much chaos.
 
 
 Rinse and repeat
@@ -186,7 +189,9 @@ What I'm doing
 ==============
 
 Note:
-
+* Early on:
+  * Weight
+  * Meditations per day
 * Very few clear answers.
 * Lots of insights about myself.
   * Addicions, food changes, my mind tricks me.
@@ -194,10 +199,6 @@ Note:
   * Not as healthy as I tell myself.
 * Techniques and habits.
   * Coffee with butter and coconut oil.
-
-* Early on:
-  * Weight
-  * Meditations per day
 * Recently:
   * Trackers: Heart rate, steps, runs/activities
   * Logging: Waist, Head ache
@@ -222,6 +223,12 @@ Note:
 
 
 ![Heart rate & fever](./biohacking/hrfever.svg)
+
+Note:
+* Noticed high heart rate
+* 9:07 - ibuprofen
+* 13 - full effect
+* HR going up before temp
 
 
 Carbohydrate Intolerance
@@ -288,6 +295,8 @@ Jan 2019 -
 
 Note:
 Show dashboards.
+* Long term HR
+* Transferring my steps
 
 
 Coming soon…
@@ -299,12 +308,9 @@ Coming soon…
 * Triggering Flow
 
 Note:
-* Long term HR
-* Transferring my steps
 * Using rescueTime metrics
 * Rise of Superman
 
-Note:
 The key is progression, not perfection.
 (First heard from Charles Poliquin, used more widely.)
 
