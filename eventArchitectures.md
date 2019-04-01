@@ -55,7 +55,8 @@ Past tense.
 Event characteristics
 ---------------------
 
-* Atomic: something happened (a student made a submission).
+* Semantic: something happened (a student made a submission).
+* Atomic: ONE thing happened.
 * Related: a stream or sequence of events (all submissions belong to an HI assignment, HI assignments belong in HandIn).
 * Behavioral: accumulated events describe system usage.
 * Projectable: the result of all events equals current state.
@@ -109,6 +110,7 @@ Note:
 Switching source of truth.  
 Necessary for FIRST class events.  
 Immutable data store.
+
 
 Previously
 ----------
