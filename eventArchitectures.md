@@ -55,11 +55,11 @@ Past tense.
 Event characteristics
 ---------------------
 
-* Semantic: something happened (a student made a submission).
-* Atomic: ONE thing happened.
-* Related: a stream or sequence of events (all submissions belong to an HI assignment, HI assignments belong in HandIn).
-* Behavioral: accumulated events describe system usage.
-* Projectable: the result of all events equals current state.
+* Semantic
+* Atomic
+* Related
+* (Behavioral)
+* (Projectable)
 
 
 
@@ -110,20 +110,6 @@ Note:
 Switching source of truth.  
 Necessary for FIRST class events.  
 Immutable data store.
-
-
-Previously
-----------
-
-1. Check authorization.
-2. Validate toward current data.
-3. Change data. (Open for race condition changes)
-4. Log.
-5. Emit event.
-
-Note:
-Changing data is open for race condition.  
-All updates destroy data!
 
 
 Roughly current code
@@ -184,6 +170,12 @@ Forcing event first thinking
 > Event-first thinking changes how you think about what you are building
 
 
+Not destroying data
+-------------------
+
+![Destroying data](./eventArchitectures/destroydata.jpg)
+
+
 Audit logging
 -------------
 
@@ -212,7 +204,7 @@ Ever wanted to rename a misspelt property?
 
 Make a `GET /assignments/:id` v2:
 
-```js
+```javascript
 AssignedToClassroom: ({ event, state }) => ({
   ...state
   space: event.classRoom,
@@ -232,6 +224,10 @@ Just aggregate SOME events, and you have an older version.
 
 Note:
 We could do this anyway.  We have SOME version history in material, but not all.  So, we don't.  And we won't.
+
+
+Forcing consistent change behaviour
+-----------------------------------
 
 
 
