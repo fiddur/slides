@@ -97,71 +97,15 @@ Authorization handling on event broker.
 Martin Fowler version: Event-Carried State Transfer
 
 
-![Events flow](./eventArchitectures/eventflow.svg)
-
-Note:
-Before going into details about live-server, we'll look at more events!
-
-
 
 ### Event sourcing
 
-Note:
-Switching source of truth.  
-Necessary for FIRST class events.  
-Immutable data store.
-
-
-Roughly current code
-```js
-const { assignment } = await findAssignmentById...
-
-verifyRole({ roles, spaceId: assignment.space })
-
-const result = await updateAssignment({ ... })
-
-logger.debug(' => create assignment: \n ', assignment);
-
-pushEvent({ type: 'assignment:Updated' })
-
-return { status: 200 }
-```
-
-
-With event sourcing
-```js
-const { assignment } = await findAssignmentById...
-
-verifyRole({ roles, spaceId: assignment.space })
-
-addEvent({ expectedVersion: assignment.version, type... })
-
-return { status: 200 }
-```
-
-Note:
-version based on event number
-
-
-Read side / aggregator
-
-```js
-const reducers = {
-  Created: ({ data }) => data,
-  AssignedToSpace: ({ data: { space }, store }) =>
-    ({ ...store, space }),
-};
-
-const events = await getEvents({
-  aggregate, from, to, types: Object.keys(reducers),
-})
-const projection = events.reduce(apply(reducers))
-```
-
-Note:
-* reducer  
-* projection  
-* saga  
+* Switching source of truth.
+* Necessary for FIRST class events.
+* Immutable data store.
+* reducer
+* projection
+* saga
 
 
 Forcing event first thinking
@@ -197,88 +141,45 @@ We can do this without event sourcing, by adding a version in the data storage
 and validate that.  But we don't.  And, we won't.
 
 
-Change management
------------------
 
-Ever wanted to rename a misspelt property?
+DDD
+===
 
-Make a `GET /assignments/:id` v2:
-
-```javascript
-AssignedToClassroom: ({ event, state }) => ({
-  ...state
-  space: event.classRoom,
-})
-```
-
-Note:
-Old events are forever...  
-We could do this anyway.  For bigger things, double write, migration, take down
-old.  Or, migration and change-events from db.  But we don't.  And we won't.
-
-
-Version history
----------------
-
-Just aggregate SOME events, and you have an older version.
-
-Note:
-We could do this anyway.  We have SOME version history in material, but not all.  So, we don't.  And we won't.
-
-
-Forcing consistent change behaviour
------------------------------------
+Domain Driven Design
 
 
 
-CQRS
-====
+(Micro)services
+===============
 
-Command  
-Query  
-Responsibility  
-Segregation  
+* SOA done right
+* Finding the right boundaries (DDD)
 
 
 
 Back to practicality reality
 ============================
 
-
-Live-server
------------
-
-
-### Event pushing
-
-See [live-client](https://github.com/AulaEducation/aula/tree/liveEventsLambda/shared/live-client)
+Note:
+* How it can positively affect the developer experience?
+* How to maintain, test, monitor those services?
+* Where is the limit? We don’t have a huge team to maintain dozens of services so maybe we need to apply some boundaries when splitting services.
+* Why do we need it? Examples of things that we struggle with that could be solved by such things.
+* Data. Like proof that such system will reduce load/help with scale and reliability.
 
 
-### Event structure
+Notifications
+-------------
 
-```javascript
-pushEvent({
-  audience: {
-    educators: [assignment.space],
-    students: assignment.isHidden ? [] : [assignment.space],
-  },
-  correlationId,
-  data: assignment,
-  stream: `handin-assignment-${insertedId}`,
-  timestamp: assignment.createdAt,
-  type: 'assignment:Created',
-});
-```
+One or many?  Storage boundary.
+
+* Web pusher
+* Mobile pusher
+* Mailer
+* Pull ...
 
 
-### Event receiver
+System Touches Note Activity
+----------------------------
 
-See [live-server sam](https://github.com/AulaEducation/aula/tree/liveEventsLambda/sam/live-server)
 
-
-### live-server next steps
-
-* Accepting connections with accessToken (for educator/student audience).
-* Connecting to live-server with accessToken from web-app.
-* Upgrading services to send `v2` events.
-* Clean away all event-specific logic from live-server!
