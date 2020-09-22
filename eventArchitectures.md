@@ -76,7 +76,6 @@ Note:
 Client fetches updates from API.
 
 
-
 ### Fat events notification
 
 ```yaml
