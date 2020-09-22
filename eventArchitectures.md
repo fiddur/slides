@@ -172,6 +172,7 @@ Notifications
 
 One or many?  Storage boundary.
 
+* Notification creator
 * Web pusher
 * Mobile pusher
 * Mailer
