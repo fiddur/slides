@@ -3,10 +3,11 @@ Event Sourcing and CQRS in a Microservices/Serverless architecture
 Fredrik Liljegren, VOYD, 2022
 
 Note:
-2009 Textalk
-Copying files, no history, no rollback
-Vanished code, overwritten by someone else
-Failing code fixing in panic
+* - 3:00
+* 2009 Textalk
+* Copying files, no history, no rollback
+* Vanished code, failing code panic
+* Git - change, who, when, purpose
 
 
 
@@ -27,6 +28,11 @@ index 040f798..2040db2 100644
 +Added a line 😏
 ```
 
+Note:
+* - 4:00
+* Aggregate current state
+* Annotate
+
 
 
 ```bash
@@ -37,21 +43,57 @@ index 040f798..2040db2 100644
 7c23a00d (Fredrik 2019-04-02 09:58:58 +0100  59) * Atomic
 ```
 
+Note:
+* - 5:00
+* DST 2 lines
+* Surprised if anyone updates the current state, losing all history
+* Still see state changing in backend!
+* UPDATE row -> loose data
+
 
 
 ```yaml
-stream: Comment-abc123
+   stream: Comment-abc123
 
 eventType: Commented
-revision: 0
-at: 2022-03-10T09:58:50.123Z
-by: user-sdf234
-on: Product-ghj567
-body: This is my comment body.
+ revision: 0
+       at: 2022-03-10T09:58:50.123Z
+       by: user-sdf234
+       on: Product-ghj567
+     body: This is my comment body.
 
 eventType: EditedComment
-revision: 1
-at: 2022-03-10T10:58:50.987Z
-by: user-sdf234
-body: THIS is MY comment body!!!
+ revision: 1
+       at: 2022-03-10T10:58:50.987Z
+       by: user-sdf234
+     body: THIS is MY comment body!!!
 ```
+
+
+
+![Making projections](./esCqrsµS/projections.svg)
+
+Note:
+* ..:00
+* Projection optional
+
+
+
+![Read sides](./esCqrsµS/readsides.svg)
+
+Note:
+* ..:00
+* Segregate Command handler from Query responsibilities
+
+
+
+CQRS
+====
+Command/Query Responsibility Segregation
+
+
+
+
+> As long as you UPDATE your main source of truth, you are loosing valuable data.
+
+Fredrik Liljegren / @fiddur
