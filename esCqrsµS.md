@@ -49,6 +49,7 @@ Note:
 * Surprised if anyone updates the current state, losing all history
 * Still see state changing in backend!
 * UPDATE row -> loose data
+* Some practices.  Basics:
 
 
 
@@ -69,13 +70,74 @@ eventType: EditedComment
      body: THIS is MY comment body!!!
 ```
 
+Note:
+* -...
+* Want change - add event
+* Streams & categories
+* All events: type, at, by, revision
+* Data specific to event type
 
 
-![Making projections](./esCqrsµS/projections.svg)
+
+```yaml
+eventType: Deleted
+ revision: 3
+       at: 2022-03-10T11:58:50.555Z
+       by: user-000001
+```
+
+Note:
+* -
+* Admin?
+* How to use this data
+
+
+
+![Making projections](./esCqrsµS/aggregating.svg)
 
 Note:
 * ..:00
 * Projection optional
+
+
+
+CQRS
+====
+
+Command/Query Responsibility Segregation
+
+
+
+```typescript
+const reduceComment = (comment, event) => {
+  switch (event.type) {
+    case 'Commented': return {
+      ...comment,
+      createdAt: event.at,
+      author: event.by,
+      body: event.body,
+    }
+    case 'EditedComment': return {
+      ...comment,
+      updatedAt: event.at,
+      body: event.body,
+    }
+    case 'Deleted': return {
+      ...comment,
+      deletedAt: event.at,
+    }
+  }
+}
+
+const comment = events.reduce(
+  reduceComment, { id: streamId }
+)
+```
+
+
+
+
+![Storing projections](./esCqrsµS/projection-store.svg)
 
 
 
@@ -87,10 +149,10 @@ Note:
 
 
 
-CQRS
-====
-Command/Query Responsibility Segregation
+Concurrency handling
+====================
 
+Optimistic
 
 
 
