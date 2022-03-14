@@ -18,7 +18,7 @@ Date:   Tue Sep 22 10:36:48 2020 +0200
 
     Updating The File
 
-diff --git a/theFile.md b/theFile.md
+diff --git a/theFile.md b/theFileWithANewFilename.md
 index 040f798..2040db2 100644
 --- a/theFile.md
 +++ b/theFileWithANewFilename.md
@@ -97,18 +97,18 @@ Note:
 
 Note:
 * ..:00
-* Projection optional
-
-
-
-CQRS
-====
-
-Command/Query Responsibility Segregation
+* User sends command
+* Command handler check permissions and possibility.
+* -> eventstore -> any listeners
+* git checkouts, pulling - es pushing
 
 
 
 ```typescript
+const comment = events.reduce(
+  reduceComment, { id: streamId }
+)
+
 const reduceComment = (comment, event) => {
   switch (event.type) {
     case 'Commented': return {
@@ -128,16 +128,18 @@ const reduceComment = (comment, event) => {
     }
   }
 }
-
-const comment = events.reduce(
-  reduceComment, { id: streamId }
-)
 ```
 
+Note:
+* Many GB?  Store it!
 
 
 
 ![Storing projections](./esCqrsµS/projection-store.svg)
+
+Note:
+* Projection store can never deny what happened!
+  * Checks are already done
 
 
 
@@ -145,7 +147,28 @@ const comment = events.reduce(
 
 Note:
 * ..:00
-* Segregate Command handler from Query responsibilities
+* Make a query interface for the store
+* Want a list of comments by Product?
+  * Read side.
+
+
+
+CQRS
+====
+
+Command/Query Responsibility Segregation
+
+
+
+Micro Services & Serverless
+===========================
+
+Note:
+* Splitting up
+* Separation of concerns
+* Deploying separately (crashing separately)
+* Scaling separately
+* serverless - scaling functions separately
 
 
 
