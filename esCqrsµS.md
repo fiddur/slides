@@ -172,10 +172,47 @@ Note:
 
 
 
-Concurrency handling
-====================
+```
+PUT /api/comments/abc123/EditComment
+If-Match: 6
+{
+  "body": "A new comment body"
+}
+```
 
-Optimistic
+Note:
+* Optimistic
+
+
+
+```
+await eventstore.appendToStream(
+  `Comment-${id}`,
+  jsonEvent<EditedComment>({
+    type: EditedComment',
+    data: { at, by, body },
+  }),
+  { expectedRevision: 6 },
+)
+```
+
+
+
+```
+412 Precondition Failed
+Etag: 8
+```
+
+
+
+* Event routing and storing in the same service
+* Subscriptions and shared subscriptions
+* Optimistic concurrency
+* Category projection streams
+
+Note:
+
+The event store named EventStore 🙄
 
 
 
